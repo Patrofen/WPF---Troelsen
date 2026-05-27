@@ -1,9 +1,11 @@
+using System.Collections;
 using System.ComponentModel;
 
 namespace WpfNotifications.Models;
 
-public partial class Car : IDataErrorInfo
+public partial class Car : BaseEntity, IDataErrorInfo
 {
+    #region Реализация IDataErrorInfo
     public string Error { get; }
 
     public string this[string columnName]
@@ -15,9 +17,16 @@ public partial class Car : IDataErrorInfo
                 case nameof(Id):
                     break;
                 case nameof(Make):
-                    return Make == "ModelT" ? "Too Old" : CheckMakeAndColor();
+                    CheckMakeAndColor();
+                    if (Make == "ModelT")
+                    {
+                        AddError(nameof(Make), "Too Old");
+                        //hasError = true;
+                    }
+                    break;
                 case nameof(Color):
-                    return CheckMakeAndColor();
+                    CheckMakeAndColor();
+                    break;
                 case nameof(PetName):
                     break;
             }
@@ -25,13 +34,18 @@ public partial class Car : IDataErrorInfo
         }
     }
 
-    internal string CheckMakeAndColor()
+    internal bool CheckMakeAndColor()
     {
         if (Make == "Chevy" && Color == "Pink")
         {
-            return $"{Make}'s don't come in {Color}";
+            AddError(nameof(Make), $"{Make}'s don't come in {Color}");
+            AddError(nameof(Color),
+            $"{Make}'s don't come in {Color}");
+            return true;
         }
-
-        return string.Empty;
+        return false;
     }
+    #endregion
+    
+    
 }

@@ -3,19 +3,20 @@ using System.Runtime.CompilerServices;
 
 namespace WpfNotifications.Models;
 
-public class Car: INotifyPropertyChanged
+public partial class Car : INotifyPropertyChanged
 {
-    private int _id;
-    private string? _make;
     private string? _color;
-    private string? _petName;
+    private int _id;
     private bool _isChanged;
-    public int Id 
+    private string? _make;
+    private string? _petName;
+
+    public int Id
     {
         get => _id;
         set
         {
-            if(value == _id) return;
+            if (value == _id) return;
             _id = value;
             OnPropertyChanged();
         }
@@ -26,7 +27,7 @@ public class Car: INotifyPropertyChanged
         get => _make;
         set
         {
-            if(value == _make) return;
+            if (value == _make) return;
             _make = value;
             OnPropertyChanged();
         }
@@ -34,10 +35,10 @@ public class Car: INotifyPropertyChanged
 
     public string Color
     {
-        get =>  _color;
+        get => _color;
         set
         {
-            if(value == _color) return;
+            if (value == _color) return;
             _color = value;
             OnPropertyChanged();
         }
@@ -48,7 +49,7 @@ public class Car: INotifyPropertyChanged
         get => _petName;
         set
         {
-            if(value == _petName) return;
+            if (value == _petName) return;
             _petName = value;
             OnPropertyChanged();
         }
@@ -59,27 +60,18 @@ public class Car: INotifyPropertyChanged
         get => _isChanged;
         set
         {
-            if(value == _isChanged) return;
+            if (value == _isChanged) return;
             _isChanged = value;
             OnPropertyChanged();
         }
     }
+
     public event PropertyChangedEventHandler? PropertyChanged;
 
     protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
     {
-        if (propertyName != nameof(IsChanged))
-        {
-            IsChanged = true;
-        }
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        if (propertyName != nameof(IsChanged)) IsChanged = true;
+        //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(string.Empty));
     }
-
-    /*protected bool SetField<T>(ref T field, T value, [CallerMemberName] string? propertyName = null)
-    {
-        if (EqualityComparer<T>.Default.Equals(field, value)) return false;
-        field = value;
-        OnPropertyChanged(propertyName);
-        return true;
-    }*/
 }

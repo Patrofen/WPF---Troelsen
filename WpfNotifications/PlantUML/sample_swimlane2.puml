@@ -1,0 +1,37 @@
+@startuml
+
+| | 
+|a| Swim1
+|b| Swim2
+|c| Swim3
+| |
+fork
+|a|
+-[hidden]->
+start
+    if (A?) then (no)
+        stop
+    else (yes)
+        if (B?) then (no)
+            stop
+        else (yes)
+            :C;
+        endif
+    endif
+stop
+fork again
+|b|
+-[hidden]->
+start
+    :Process 2;
+stop
+fork again
+|c|
+-[hidden]->
+start
+    :Process 3;
+stop
+| |
+end fork
+
+@enduml

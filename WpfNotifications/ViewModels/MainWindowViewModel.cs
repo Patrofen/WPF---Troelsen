@@ -16,17 +16,17 @@ public class MainWindowViewModel
         Cars.Add(new Car {Id = 2, Make = "Ford", Color = "Green", PetName = "Ford Mondeo", IsChanged = false});
     }
     
-    private ICommand _changeColorCommand = null;
+    private ICommand? _changeColorCommand;
     public ICommand ChangeColorCmd
         => _changeColorCommand ??= new ChangeColorCommand();
     
-    private ICommand _addCarCommand = null;
+    private ICommand? _addCarCommand;
     public ICommand AddCarCmd
         => _addCarCommand ??= new AddCarCommand();
     
-    private RelayCommand<Car> _deleteCarCommand = null;
+    private RelayCommand<Car>? _deleteCarCommand;
     public RelayCommand<Car> DeleteCarCmd
         => _deleteCarCommand ??= new RelayCommand<Car>(DeleteCar, CanDeleteCar);
     private void DeleteCar(Car car) => Cars.Remove(car);
-    private bool CanDeleteCar(Car car) => car != null;
+    private bool CanDeleteCar(Car? car) => car != null;
 }

@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfNotifications", "WpfNotifications\WpfNotifications.csproj", "{DE2F987C-3658-4F07-9668-43258226491F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVM", "MVVM\MVVM.csproj", "{8E5076A2-541B-4A52-AD21-268913F81205}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{DE2F987C-3658-4F07-9668-43258226491F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE2F987C-3658-4F07-9668-43258226491F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE2F987C-3658-4F07-9668-43258226491F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E5076A2-541B-4A52-AD21-268913F81205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E5076A2-541B-4A52-AD21-268913F81205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E5076A2-541B-4A52-AD21-268913F81205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E5076A2-541B-4A52-AD21-268913F81205}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

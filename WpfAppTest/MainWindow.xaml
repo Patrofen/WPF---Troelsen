@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfAppTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:corLib="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="525"
+        MouseMove="MainWindow_OnMouseMove"
+        KeyDown="MainWindow_OnKeyDown">
+    <StackPanel>
+         <!--Расширение разметки Static позволяет получать значение
+                       статического члена класса -->
+         <Label Content="{x:Static corLib:Environment.OSVersion}"/>
+         <Label Content="{x:Static corLib:Environment.ProcessorCount}"/>
+         
+         <!--Расширение разметки Type - это версия XAML
+         операции typeof языка C#-->
+         <Label Content="{x:Type Button}"/>
+         <Label Content="{x:Type corLib:Boolean}"/>
+         
+         <Button x:Name="button" 
+                 Content="Button" 
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Margin="10,10,0,0"
+                 Width="150"
+                 Click="Button_OnClick">
+         </Button>
+         
+         <Calendar HorizontalAlignment="Center"></Calendar>
+         <DatePicker></DatePicker>
+         
+    </StackPanel>
+</Window>

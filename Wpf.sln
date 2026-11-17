@@ -2,7 +2,17 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfNotifications", "WpfNotifications\WpfNotifications.csproj", "{DE2F987C-3658-4F07-9668-43258226491F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVM", "MVVM\MVVM.csproj", "{8E5076A2-541B-4A52-AD21-268913F81205}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryResourcesApp", "BinaryResourcesApp\BinaryResourcesApp.csproj", "{5377F01B-73CD-4898-8155-FB1318D59F48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetanitSQLiteApp", "MetanitSQLiteApp\MetanitSQLiteApp.csproj", "{917C7226-7B24-4C2A-9F14-DE212837050D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVM", "MVVM\MVVM.csproj", "{9344FB76-0270-4A2F-A404-FD625DA9833F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBrushesLibrary", "MyBrushesLibrary\MyBrushesLibrary.csproj", "{F81822E8-D325-49FD-A4EE-AF46ABC79DE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjесtResourcesApp", "ObjесtResourcesApp\ObjесtResourcesApp.csproj", "{4FD1A9C0-7C70-4094-A632-080FD1681472}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppTest", "WpfAppTest\WpfAppTest.csproj", "{CE658051-E032-4FC1-87E7-459E567AD16D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,9 +24,29 @@ Global
 		{DE2F987C-3658-4F07-9668-43258226491F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE2F987C-3658-4F07-9668-43258226491F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE2F987C-3658-4F07-9668-43258226491F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8E5076A2-541B-4A52-AD21-268913F81205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8E5076A2-541B-4A52-AD21-268913F81205}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8E5076A2-541B-4A52-AD21-268913F81205}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8E5076A2-541B-4A52-AD21-268913F81205}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5377F01B-73CD-4898-8155-FB1318D59F48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5377F01B-73CD-4898-8155-FB1318D59F48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5377F01B-73CD-4898-8155-FB1318D59F48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5377F01B-73CD-4898-8155-FB1318D59F48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{917C7226-7B24-4C2A-9F14-DE212837050D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{917C7226-7B24-4C2A-9F14-DE212837050D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{917C7226-7B24-4C2A-9F14-DE212837050D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{917C7226-7B24-4C2A-9F14-DE212837050D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9344FB76-0270-4A2F-A404-FD625DA9833F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9344FB76-0270-4A2F-A404-FD625DA9833F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9344FB76-0270-4A2F-A404-FD625DA9833F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9344FB76-0270-4A2F-A404-FD625DA9833F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F81822E8-D325-49FD-A4EE-AF46ABC79DE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F81822E8-D325-49FD-A4EE-AF46ABC79DE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F81822E8-D325-49FD-A4EE-AF46ABC79DE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F81822E8-D325-49FD-A4EE-AF46ABC79DE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FD1A9C0-7C70-4094-A632-080FD1681472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FD1A9C0-7C70-4094-A632-080FD1681472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FD1A9C0-7C70-4094-A632-080FD1681472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FD1A9C0-7C70-4094-A632-080FD1681472}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE658051-E032-4FC1-87E7-459E567AD16D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE658051-E032-4FC1-87E7-459E567AD16D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE658051-E032-4FC1-87E7-459E567AD16D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE658051-E032-4FC1-87E7-459E567AD16D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
